@@ -48,7 +48,7 @@ export default function UpdateHome() {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center bg-principal_blue h-screen w-full">
+      <div className="flex justify-center items-center bg-gradient-to-br from-blue-800 to-blue-600 h-screen w-full">
         <div className="text-center">
           <div className="flex justify-center">
             <ScaleLoader color="#FFFFFF" height={80} width={6} />
