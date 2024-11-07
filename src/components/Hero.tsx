@@ -21,10 +21,10 @@ export default function Hero() {
           />
 
           <p className="text-lg md:text-xl text-white mt-6">
-            Por favor selecciona el servicio que deseas utilizar
+            Selecciona el servicio que deseas utilizar
           </p>
 
-          <section className="flex flex-col items-center md:flex-row md:space-x-10 space-y-8 md:space-y-0 mt-12">
+          <section className="flex flex-col items-center md:flex-row md:space-x-10 space-y-8 md:space-y-0 mt-9">
             {links.map((link, index) => (
               <a
                 key={link.id}
@@ -33,7 +33,7 @@ export default function Hero() {
         ${
           index <= 1 ? "bg-netflix" : "bg-disney"
         } bg-cover bg-center bg-no-repeat
-        border border-transparent hover:border-white focus:border-white focus:outline-none`}
+        border-2 border-gray-400 hover:border-white focus:border-white focus:outline-none`}
                 aria-label={link.label}
               >
                 <span className="bg-black bg-opacity-70 px-4 py-2 rounded-lg text-lg font-semibold tracking-wide text-white shadow-lg">
