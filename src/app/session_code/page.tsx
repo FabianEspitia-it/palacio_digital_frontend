@@ -36,9 +36,7 @@ export default function SessionCode() {
         setResponseMessage(`Código de sesión: ${data.code}`);
         toast.success("Gracias por preferirnos :D");
       } else {
-        toast.error(
-          "Algo salio mal, por favor verifica el correo y la contraseña"
-        );
+        toast.error("Algo salio mal, por favor verifica el correo");
       }
     } catch (error) {
       console.log(error);
