@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 
 export default function SessionCode() {
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
   async function sendData(e: FormEvent<HTMLFormElement>) {
@@ -18,16 +19,18 @@ export default function SessionCode() {
 
     const data = {
       email: email,
+      password: password,
     };
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_DISNEY}/session_code/${data.email}`,
+        `${process.env.NEXT_PUBLIC_DISNEY}/session_code/`,
         {
-          method: "GET",
+          method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
+          body: JSON.stringify(data),
         }
       );
 
@@ -36,7 +39,9 @@ export default function SessionCode() {
         setResponseMessage(`Código de sesión: ${data.code}`);
         toast.success("Gracias por preferirnos :D");
       } else {
-        toast.error("Algo salio mal, por favor verifica el correo");
+        toast.error(
+          "Algo salio mal, por favor verifica el correo y la contraseña"
+        );
       }
     } catch (error) {
       console.log(error);
@@ -72,7 +77,8 @@ export default function SessionCode() {
             className="mx-auto"
           />
           <p className="text-white text-xl mb-2 mt-2">
-            Por favor digita el correo electrónico de la cuenta
+            Por favor digita el correo electrónico de la cuenta y la contraseña
+            digital
           </p>
 
           {responseMessage && (
@@ -87,6 +93,15 @@ export default function SessionCode() {
               required
               value={email}
               onChange={(event) => setEmail(event.target.value)}
+            />
+
+            <input
+              className="border-2 border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-300 bg-white text-gray-800 rounded-lg px-4 py-3 w-full transition duration-200"
+              type="password"
+              placeholder="contraseña"
+              required
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
             />
 
             <button
