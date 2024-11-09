@@ -82,7 +82,7 @@ export default function TemporalAccess() {
 
           {responseMessage && (
             <p className="text-white text-xl mb-5">
-              Este es el link para obtener el código:
+              Link para obtener el código:
               <a
                 className="text-secondary_blue underline block"
                 rel="noopener noreferrer"

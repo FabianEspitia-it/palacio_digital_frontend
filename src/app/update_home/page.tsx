@@ -79,7 +79,7 @@ export default function UpdateHome() {
 
           {responseMessage && (
             <p className="text-white text-xl mb-5">
-              Este es el link para actualizar hogar:
+              Link para actualizar hogar:
               <a
                 className="text-secondary_blue underline block"
                 rel="noopener noreferrer"
