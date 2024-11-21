@@ -87,7 +87,7 @@ export default function SessionCode() {
 
           <form className="space-y-5" onSubmit={sendData}>
             <input
-              className="border-2 border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-300 bg-white text-gray-800 rounded-lg px-4 py-3 w-full transition duration-200"
+              className="border-2 border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-300 bg-white text-gray-800 rounded-lg px-4 py-2 w-full transition duration-200"
               type="email"
               placeholder="palacio@digital.com"
               required
@@ -96,7 +96,7 @@ export default function SessionCode() {
             />
 
             <input
-              className="border-2 border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-300 bg-white text-gray-800 rounded-lg px-4 py-3 w-full transition duration-200"
+              className="border-2 border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-300 bg-white text-gray-800 rounded-lg px-4 py-2 w-full transition duration-200"
               type="password"
               placeholder="contraseña"
               required
