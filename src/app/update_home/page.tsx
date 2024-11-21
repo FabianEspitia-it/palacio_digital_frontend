@@ -65,7 +65,7 @@ export default function UpdateHome() {
   return (
     <Fade triggerOnce cascade>
       <section className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-800 to-blue-600">
-        <div className="text-center rounded-lg px-8 max-w-lg w-full">
+        <div className="text-center rounded-lg px-8 pb-10 max-w-lg w-full">
           <Image
             src="/images/logo_palacio.png"
             alt="Palacio Digital Logo"
