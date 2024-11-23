@@ -73,7 +73,7 @@ export default function UpdateHome() {
             height={180}
             className="mx-auto"
           />
-          <p className="text-white text-xl mb-2 mt-2">
+          <p className="text-white text-xl my-4">
             Por favor digita el correo electrónico de la cuenta
           </p>
 
